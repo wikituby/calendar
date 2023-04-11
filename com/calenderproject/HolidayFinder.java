@@ -1,10 +1,12 @@
 package com.calenderproject;
 
 import java.time.LocalDate;
+import java.util.Scanner;
 
 public class HolidayFinder {
 
     public void holidayFinder() {
+        Scanner scanner = new Scanner(System.in);
         LocalDate startDate = LocalDate.parse(getInput("Enter start date (yyyy-mm-dd): "));
         LocalDate endDate = LocalDate.parse(getInput("Enter end date (yyyy-mm-dd): "));
 
