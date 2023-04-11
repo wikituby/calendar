@@ -7,6 +7,7 @@ public class HolidayFinder {
 
     public void holidayFinder() {
         Scanner scanner = new Scanner(System.in);
+        //still implimenting the scanner to pass inputs perfectly without errors
         LocalDate startDate = LocalDate.parse(getInput("Enter start date (yyyy-mm-dd): "));
         LocalDate endDate = LocalDate.parse(getInput("Enter end date (yyyy-mm-dd): "));
 
