@@ -19,6 +19,7 @@ public class CalendarProgram {
                           2. View Month
                           3. View Year
                           4. View Holidays
+                          5. Add Custom Holidays
                           0. Exit
                           """;
         System.out.println(homeView);
@@ -41,9 +42,14 @@ public class CalendarProgram {
                 HolidayFinder myHolidayFinderObject = new HolidayFinder();
                 myHolidayFinderObject.holidayFinder();
             }
+            case 5 ->{
+                CustomHolidayCalendar myCustomHolidays = new CustomHolidayCalendar();
+                myCustomHolidays.customHoliday();
+            }
             case 0 ->{
                 System.exit(0);
             }
+
 
 
         }
