@@ -82,8 +82,6 @@ public class HolidayCalendar {
             System.out.println("Invalid choice.");
         }
     }
-
-    // get all holidays in the given month at a time
     private static List<String> getHolidaysInMonth(Calendar calendar) {
         List<String> holidays = new ArrayList<>();
         int daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
@@ -94,8 +92,6 @@ public class HolidayCalendar {
         }
         return holidays;
     }
-
-    // get all holidays in the given year
     private static List<String> getHolidaysInYear(int year) {
         List<String> holidays = new ArrayList<>();
         Calendar calendar = Calendar.getInstance();
