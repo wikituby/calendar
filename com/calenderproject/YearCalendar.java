@@ -91,8 +91,6 @@ public class YearCalendar {
 
     // check if the given day is a holiday
     private static boolean isHoliday(int day, int month, int year) {
-        // implement your holiday checking logic here
-        // for example:
         if (month == Calendar.JANUARY && day == 1) {
             return true; // New Year's Day
         } else if (month == Calendar.DECEMBER && day == 25) {

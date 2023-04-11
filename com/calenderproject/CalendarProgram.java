@@ -23,6 +23,8 @@ public class CalendarProgram {
                           """;
         System.out.println(homeView);
         int mySwitch = scanner.nextInt();
+        //String mySwitch = String.valueOf(scanner.nextInt());
+
         switch (mySwitch){
             case 1 -> {
                 GoToDate myGoToDateObject = new GoToDate();
