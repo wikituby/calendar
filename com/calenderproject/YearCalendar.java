@@ -19,7 +19,7 @@ public class YearCalendar {
                 }
                 break;
             } catch (Exception e) {
-                System.out.println("Invalid year. Please enter a valid year between 1800 and 2023.");
+                System.out.print("Enter year After(1800): ");
             }
         }
 
@@ -35,7 +35,7 @@ public class YearCalendar {
                 }
                 break;
             } catch (Exception e) {
-                System.out.println("Invalid month. Please enter a valid month between 1 and 12.");
+                System.out.println("Invalid year. Please enter a valid year after 1800.");
             }
         }
 

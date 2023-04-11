@@ -6,12 +6,11 @@ public class GoToDate {
     public void myGoToDate() {
         Scanner input = new Scanner(System.in);
         Calendar cal = new GregorianCalendar();
-        int currentYear = cal.get(Calendar.YEAR);
 
 
         int year = 0;
         while (true) {
-            System.out.print("Enter year (1800-2023): ");
+            System.out.print("Enter year After(1800): ");
             try {
                 year = Integer.parseInt(input.nextLine());
                 //current update from 2023 validation to current year
@@ -20,7 +19,7 @@ public class GoToDate {
                 }
                 break;
             } catch (Exception e) {
-                System.out.println("Invalid year. Please enter a valid year between 1800 and 2023.");
+                System.out.println("Invalid year. Please enter a valid year after 1800.");
             }
         }
 

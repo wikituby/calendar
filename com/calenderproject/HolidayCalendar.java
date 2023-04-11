@@ -11,7 +11,7 @@ public class HolidayCalendar {
 
         int year = 0;
         while (true) {
-            System.out.print("Enter year (1800-2023): ");
+            System.out.print("Enter year After(1800): ");
             try {
                 //year = Integer.parseInt(input.nextLine());
                 year = scanner.nextInt();
@@ -21,7 +21,7 @@ public class HolidayCalendar {
                 }
                 break;
             } catch (Exception e) {
-                System.out.println("Invalid year. Please enter a valid year between 1800 and 2023.");
+                System.out.println("Invalid year. Please enter a valid year after 1800.");
             }
         }
 
