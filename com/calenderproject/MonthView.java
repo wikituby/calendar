@@ -37,7 +37,7 @@ public class MonthView {
 
         int month = 0;
         while (true) {
-            System.out.print("Enter year After(1800): ");
+            System.out.print("Enter month (1-12): ");
             try {
                 //month = Integer.parseInt(input.nextLine());
                 month = scanner.nextInt();
@@ -47,7 +47,7 @@ public class MonthView {
                 }
                 break;
             } catch (Exception e) {
-                System.out.println("Invalid year. Please enter a valid year after 1800.");
+                System.out.println("Invalid month. Please enter a valid month between 1 and 12.");
             }
         }
 
