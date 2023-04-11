@@ -110,9 +110,10 @@ public class HolidayCalendar {
 /// still checkig these holidayz
     private static boolean isHoliday(int day, int month, int year) {
         if (month == Calendar.JANUARY && day == 1) {
-            return true; // New Year's Day
+            return true; // by default we have only new year...return true
+
         } else if (month == Calendar.DECEMBER && day == 25) {
-            return true; // Christmas Day
+            return true; // by default we have only xmass...return true
         } else {
             return false;
         }
