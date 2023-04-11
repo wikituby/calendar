@@ -63,7 +63,6 @@ public class MonthView {
         int month = scanner.nextInt();
         scanner.close();*/
 
-        // Print the calendar for the month and year
         LocalDate date = LocalDate.of(year, month, 1);
         DateTimeFormatter monthNameFormatter = DateTimeFormatter.ofPattern("MMMM yyyy");
         System.out.println(date.format(monthNameFormatter));
@@ -95,7 +94,7 @@ public class MonthView {
             System.out.println();
         }
 
-        // Print all the holidays for the year
+        // holidays for the year full
         System.out.println("Holidays:");
         for (LocalDate holidayDate : holidays.keySet()) {
             if (holidayDate.getYear() == year) {
