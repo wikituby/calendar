@@ -6,8 +6,6 @@ public class CustomHolidayCalendar {
     public void customHoliday() {
         Scanner scanner = new Scanner(System.in);
 
-
-
         int year = 0;
         while (true) {
             System.out.print("Enter year (1800-2023): ");
