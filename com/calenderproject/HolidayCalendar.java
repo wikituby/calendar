@@ -51,7 +51,7 @@ public class HolidayCalendar {
         System.out.print("Print holidays for month (m) or year (y)? ");
         String choice = scanner.next();
 
-        // create a calendar instance for the given year and month
+        // reassign my variables with the client inputs from the scanner
         Calendar calendar = Calendar.getInstance();
         calendar.clear();
         calendar.set(Calendar.YEAR, year);
