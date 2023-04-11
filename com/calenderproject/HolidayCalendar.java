@@ -46,7 +46,7 @@ public class HolidayCalendar {
         int year = scanner.nextInt();
         System.out.print("Enter month (1-12): ");
         int month = scanner.nextInt() - 1;
-        // subtract 1 to convert to 0-based index
+        subtract 1 to convert to 0-based index
          */
 
         // check if the user wants to print holidays for the month or the year
@@ -54,7 +54,6 @@ public class HolidayCalendar {
         String choice = scanner.next();
 
         // reassign my variables with the client inputs from the scanner
-        //Calendar calendar = Calendar.getInstance();
         Calendar calendar = new GregorianCalendar();
 
         calendar.clear();
@@ -110,13 +109,13 @@ public class HolidayCalendar {
         return holidays;
     }
 
-    /// still checkig these holidayz
+    /// still checking these holiday
     private static boolean isHoliday(int day, int month, int year) {
         if (month == Calendar.JANUARY && day == 1) {
-            return true; // by default we have only new year...return true
+            return true; // by we have only new year...return true
 
         } else if (month == Calendar.DECEMBER && day == 25) {
-            return true; // by default we have only xmass...return true
+            return true; // by we have only one ...return true
         } else {
             return false;
         }
