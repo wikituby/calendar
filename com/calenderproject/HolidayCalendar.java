@@ -6,6 +6,8 @@ public class HolidayCalendar {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+        Calendar cal = new GregorianCalendar();
+        int currentYear = cal.get(Calendar.YEAR);
 
         int year = 0;
         while (true) {
@@ -14,7 +16,7 @@ public class HolidayCalendar {
                 //year = Integer.parseInt(input.nextLine());
                 year = scanner.nextInt();
 
-                if (year < 1800 || year > 2023) {
+                if (year < 1800 || year > currentYear) {
                     throw new Exception();
                 }
                 break;

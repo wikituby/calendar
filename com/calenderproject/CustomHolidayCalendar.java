@@ -6,22 +6,21 @@ public class CustomHolidayCalendar {
     public void customHoliday() {
         Scanner scanner = new Scanner(System.in);
         Calendar calendar = new GregorianCalendar();
-        int currentYear = calendar.get(Calendar.YEAR);
 
 
         int year = 0;
         while (true) {
-            System.out.print("Enter year (1800-2023): ");
+            System.out.print("Enter year After(1800): ");
             try {
                 //year = Integer.parseInt(input.nextLine());
                 year = scanner.nextInt();
-                //current update from 2023 validation to current year
-                if (year < 1800 || year > currentYear) {
+                //current update year After 1800...no limit forward
+                if (year < 1800) {
                     throw new Exception();
                 }
                 break;
             } catch (Exception e) {
-                System.out.println("Invalid year. Please enter a valid year between 1800 and 2023.");
+                System.out.println("Invalid year. Please enter a valid year after 1800.");
             }
         }
 
@@ -85,17 +84,17 @@ public class CustomHolidayCalendar {
         for (int day = 1; day <= numDays; day++) {
             boolean isHoliday = holidays.contains(day);
             if (isHoliday) {
-                System.out.print("\033[31m"); // ANSI escape code for red text
+                System.out.print("\033[31m"); // from my research ANSI escape code for red text
             }
             System.out.printf("%2d ", day);
             if (isHoliday) {
-                System.out.print("\033[0m"); // ANSI escape code to reset text color
+                System.out.print("\033[0m"); // from research ANSI escape code to reset text color
             }
 
             if (startDay == Calendar.SATURDAY) {
                 System.out.print("\n");
             }
-            startDay = (startDay % 7) + 1; // increment the day of the week
+            startDay = (startDay % 7) + 1;
         }
 
         // print trailing spaces if necessary

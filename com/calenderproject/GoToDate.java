@@ -15,7 +15,7 @@ public class GoToDate {
             try {
                 year = Integer.parseInt(input.nextLine());
                 //current update from 2023 validation to current year
-                if (year < 1800 || year > currentYear) {
+                if (year < 1800) {
                     throw new Exception();
                 }
                 break;
