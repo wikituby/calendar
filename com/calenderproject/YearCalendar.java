@@ -89,7 +89,7 @@ public class YearCalendar {
         System.out.println("All public holidays in " + year + ": " + String.join(", ", allHolidays));
     }
 
-    // check if the given day is a holiday
+    // check if the given day is a holiday if not we see what to add on
     private static boolean isHoliday(int day, int month, int year) {
         if (month == Calendar.JANUARY && day == 1) {
             return true; // New Year's Day
