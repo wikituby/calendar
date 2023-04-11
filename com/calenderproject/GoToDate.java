@@ -48,7 +48,9 @@ public class GoToDate {
             }
         }
 
-        Calendar cal = Calendar.getInstance();
+        //Calendar cal = Calendar.getInstance();
+        Calendar cal = new GregorianCalendar();
+
         cal.set(year, month-1, day);
 
         int maxDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);

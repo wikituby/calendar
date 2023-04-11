@@ -52,7 +52,9 @@ public class HolidayCalendar {
         String choice = scanner.next();
 
         // reassign my variables with the client inputs from the scanner
-        Calendar calendar = Calendar.getInstance();
+        //Calendar calendar = Calendar.getInstance();
+        Calendar calendar = new GregorianCalendar();
+
         calendar.clear();
         calendar.set(Calendar.YEAR, year);
         calendar.set(Calendar.MONTH, month);
