@@ -19,7 +19,6 @@ public class MonthView {
         holidays.put(LocalDate.of(2023, 4, 7), "Good Friday");
 
 
-
         int year = 0;
         while (true) {
             System.out.print("Enter year (1800-2023): ");

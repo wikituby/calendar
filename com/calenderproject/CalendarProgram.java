@@ -1,11 +1,5 @@
 package com.calenderproject;
 
-import com.calenderproject.GoToDate;
-import com.calenderproject.HolidayFinder;
-import com.calenderproject.MonthView;
-import com.calenderproject.YearCalendar;
-
-import java.util.*;
 import java.util.Scanner;
 
 public class CalendarProgram {
@@ -15,45 +9,48 @@ public class CalendarProgram {
         System.out.println("Please chose an option ");
 
         String homeView = """
-                          1. Go To Date
-                          2. View Month
-                          3. View Year
-                          4. View Holidays
-                          5. Add Custom Holidays
-                          0. Exit
-                          """;
+                1. Go To Specific Date
+                2. View Full Month
+                3. View Full Year
+                4. View Holidays in Month or Year
+                5. Add Custom Holidays
+                6. Holiday Finder Randomly
+                0. Exit
+                """;
         System.out.println(homeView);
         int mySwitch = scanner.nextInt();
-        //String mySwitch = String.valueOf(scanner.nextInt());
 
-        switch (mySwitch){
+        switch (mySwitch) {
             case 1 -> {
                 GoToDate myGoToDateObject = new GoToDate();
-                myGoToDateObject.myGoToDate();            }
-            case 2 ->{
+                myGoToDateObject.myGoToDate();
+            }
+            case 2 -> {
                 MonthView myMonthViewObject = new MonthView();
                 myMonthViewObject.monthView();
             }
-            case 3 ->{
+            case 3 -> {
                 YearCalendar myYearCalenderObject = new YearCalendar();
                 myYearCalenderObject.yearCalendar();
             }
-            case 4 ->{
-                HolidayFinder myHolidayFinderObject = new HolidayFinder();
-                myHolidayFinderObject.holidayFinder();
+            case 4 -> {
+                HolidayCalendar myHolidayObject = new HolidayCalendar();
+                myHolidayObject.holidayCalendar();
             }
-            case 5 ->{
+            case 5 -> {
                 CustomHolidayCalendar myCustomHolidays = new CustomHolidayCalendar();
                 myCustomHolidays.customHoliday();
             }
-            case 0 ->{
+            case 6 -> {
+                HolidayFinder myHolidayFinder = new HolidayFinder();
+                myHolidayFinder.holidayFinder();
+            }
+            case 0 -> {
                 System.exit(0);
             }
 
 
-
         }
-
 
 
     }

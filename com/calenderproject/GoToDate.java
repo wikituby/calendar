@@ -53,7 +53,7 @@ public class GoToDate {
 
         //Calendar cal = Calendar.getInstance();
 
-        cal.set(year, month-1, day);
+        cal.set(year, month - 1, day);
 
         int maxDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 

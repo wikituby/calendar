@@ -42,7 +42,7 @@ public class YearCalendar {
         //System.out.print("Enter year: ");
         //int year = scanner.nextInt();
 
-       // Calendar calendar = Calendar.getInstance();
+        // Calendar calendar = Calendar.getInstance();
         Calendar calendar = new GregorianCalendar();
 
         calendar.clear();

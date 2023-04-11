@@ -4,7 +4,7 @@ import java.util.*;
 
 public class HolidayCalendar {
 
-    public static void main(String[] args) {
+    public void holidayCalendar() {
         Scanner scanner = new Scanner(System.in);
         Calendar cal = new GregorianCalendar();
         int currentYear = cal.get(Calendar.YEAR);
@@ -86,6 +86,7 @@ public class HolidayCalendar {
             System.out.println("Invalid choice.");
         }
     }
+
     private static List<String> getHolidaysInMonth(Calendar calendar) {
         List<String> holidays = new ArrayList<>();
         int daysInMonth = calendar.getActualMaximum(Calendar.DAY_OF_MONTH);
@@ -96,6 +97,7 @@ public class HolidayCalendar {
         }
         return holidays;
     }
+
     private static List<String> getHolidaysInYear(int year) {
         List<String> holidays = new ArrayList<>();
         Calendar calendar = Calendar.getInstance();
@@ -107,7 +109,8 @@ public class HolidayCalendar {
         }
         return holidays;
     }
-/// still checkig these holidayz
+
+    /// still checkig these holidayz
     private static boolean isHoliday(int day, int month, int year) {
         if (month == Calendar.JANUARY && day == 1) {
             return true; // by default we have only new year...return true
