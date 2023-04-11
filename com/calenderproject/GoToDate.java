@@ -5,13 +5,17 @@ import java.util.*;
 public class GoToDate {
     public void myGoToDate() {
         Scanner input = new Scanner(System.in);
+        Calendar cal = new GregorianCalendar();
+        int currentYear = cal.get(Calendar.YEAR);
+
 
         int year = 0;
         while (true) {
             System.out.print("Enter year (1800-2023): ");
             try {
                 year = Integer.parseInt(input.nextLine());
-                if (year < 1800 || year > 2023) {
+                //current update from 2023 validation to current year
+                if (year < 1800 || year > currentYear) {
                     throw new Exception();
                 }
                 break;
@@ -49,7 +53,6 @@ public class GoToDate {
         }
 
         //Calendar cal = Calendar.getInstance();
-        Calendar cal = new GregorianCalendar();
 
         cal.set(year, month-1, day);
 
