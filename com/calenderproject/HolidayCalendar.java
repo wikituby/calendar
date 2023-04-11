@@ -58,7 +58,6 @@ public class HolidayCalendar {
         calendar.set(Calendar.MONTH, month);
 
         if (choice.equalsIgnoreCase("m")) {
-            // print holidays for the month
             String monthName = calendar.getDisplayName(Calendar.MONTH, Calendar.LONG, Locale.getDefault());
             System.out.println("\nHolidays in " + monthName + " " + year + ":");
             List<String> holidays = getHolidaysInMonth(calendar);
@@ -70,7 +69,6 @@ public class HolidayCalendar {
                 }
             }
         } else if (choice.equalsIgnoreCase("y")) {
-            // print holidays for the year
             System.out.println("\nHolidays in " + year + ":");
             List<String> holidays = getHolidaysInYear(year);
             if (holidays.isEmpty()) {
@@ -109,11 +107,8 @@ public class HolidayCalendar {
         }
         return holidays;
     }
-
-    // check if the given day is a holiday
+/// still checkig these holidayz
     private static boolean isHoliday(int day, int month, int year) {
-        // implement your holiday checking logic here
-        // for example:
         if (month == Calendar.JANUARY && day == 1) {
             return true; // New Year's Day
         } else if (month == Calendar.DECEMBER && day == 25) {
