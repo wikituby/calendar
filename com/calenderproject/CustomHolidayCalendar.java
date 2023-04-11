@@ -5,6 +5,7 @@ import java.util.*;
 public class CustomHolidayCalendar {
     public void customHoliday() {
         Scanner scanner = new Scanner(System.in);
+        Calendar calendar = new GregorianCalendar();
 
         int year = 0;
         while (true) {
@@ -48,7 +49,6 @@ public class CustomHolidayCalendar {
 
         // create a Calendar object for the given year and month
         //Calendar calendar = GregorianCalendar();
-        Calendar calendar = new GregorianCalendar();
 
         calendar.set(Calendar.YEAR, year);
         calendar.set(Calendar.MONTH, month - 1); // Calendar months are 0-based
