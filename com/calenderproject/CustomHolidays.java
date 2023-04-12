@@ -83,7 +83,7 @@ public class CustomHolidays {
                     //System.out.println("Events added successfully!");
                     //eventsFile.createNewFile();
                 } catch (IOException e) {
-                    System.err.println("Error creating events file: " + e.getMessage());
+                    System.err.println("Error creating Holiday file: " + e.getMessage());
                     return;
                 }
             }
@@ -92,12 +92,12 @@ public class CustomHolidays {
                 while (fileScanner.hasNextLine()) {
                     String[] parts = fileScanner.nextLine().split(",");
                     if (parts[0].equals(eventName) && parts[1].equals(eventDate)) {
-                        System.out.println("An event with this name and date already exists.");
+                        System.out.println("A Holiday with this name and date already exists.");
                         return;
                     }
                 }
             } catch (FileNotFoundException e) {
-                System.err.println("Error reading events file: " + e.getMessage());
+                System.err.println("Error reading Holiday file: " + e.getMessage());
                 return;
             }
             // Add event to file
@@ -111,15 +111,15 @@ public class CustomHolidays {
 
             try (PrintWriter writer = new PrintWriter(new FileWriter(FILENAME, true))) {
                 writer.println(eventName + "," + eventDate + "," + eventTime);
-                System.out.println("Event added successfully.");
+                System.out.println("Holiday added successfully.");
 
-                System.out.print("Do you want to add another event? (Y/N): ");
+                System.out.print("Do you want to add another Holiday? (Y/N): ");
                 String answer = scanner.nextLine().trim().toLowerCase();
                 if (!answer.equals("y")) {
                     break;
                 }
             } catch (IOException e) {
-                System.err.println("Error adding event: " + e.getMessage());
+                System.err.println("Error adding Holiday: " + e.getMessage());
             }
         }
     }
