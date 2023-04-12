@@ -5,10 +5,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class EventPlannerWithList {
+public class EventPlanner {
     private static final String FILENAME = "events.txt";
 
-    public static void myEventPlannerWithList() {
+    public static void myEventPlanner() {
         Scanner scanner = new Scanner(System.in);
         int choice;
 

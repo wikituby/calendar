@@ -1,6 +1,7 @@
 package com.calenderproject;
 
 import java.util.Scanner;
+import holidays.Holidays;
 
 public class CalendarProgram {
     public static void main(String[] args) {
@@ -39,9 +40,9 @@ public class CalendarProgram {
                 myHolidayObject.holidayCalendar();
             }
             case 5 -> {
-                System.out.println("Still implementing this!!!!");
-                //CustomHolidayCalendar myCustomHolidays = new CustomHolidayCalendar();
-                //myCustomHolidays.customHoliday();
+                //System.out.println("Still implementing this!!!!");
+                CustomHolidays myCustomHolidays = new CustomHolidays();
+                myCustomHolidays.fullAccess();
             }
             case 6 -> {
                 System.out.println("Still implementing this holiday finder!!!!");
@@ -49,8 +50,8 @@ public class CalendarProgram {
                // myHolidayFinder.holidayFinder();
             }
             case 7 -> {
-                EventPlannerWithList myPlannerObject = new EventPlannerWithList();
-                myPlannerObject.myEventPlannerWithList();
+                EventPlanner myEventPlannerObject = new EventPlanner();
+                myEventPlannerObject.myEventPlanner();
             }
             case 0 -> {
                 System.exit(0);
