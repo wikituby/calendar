@@ -15,6 +15,7 @@ public class CalendarProgram {
                 4. View Holidays in Month or Year
                 5. Add Custom Holidays
                 6. Holiday Finder Randomly
+                7. Events Planner
                 0. Exit
                 """;
         System.out.println(homeView);
@@ -38,12 +39,18 @@ public class CalendarProgram {
                 myHolidayObject.holidayCalendar();
             }
             case 5 -> {
-                CustomHolidayCalendar myCustomHolidays = new CustomHolidayCalendar();
-                myCustomHolidays.customHoliday();
+                System.out.println("Still implementing this!!!!");
+                //CustomHolidayCalendar myCustomHolidays = new CustomHolidayCalendar();
+                //myCustomHolidays.customHoliday();
             }
             case 6 -> {
-                HolidayFinder myHolidayFinder = new HolidayFinder();
-                myHolidayFinder.holidayFinder();
+                System.out.println("Still implementing this holiday finder!!!!");
+                //HolidayFinder myHolidayFinder = new HolidayFinder();
+               // myHolidayFinder.holidayFinder();
+            }
+            case 7 -> {
+                EventPlannerWithList myPlannerObject = new EventPlannerWithList();
+                myPlannerObject.myEventPlannerWithList();
             }
             case 0 -> {
                 System.exit(0);
