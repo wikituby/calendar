@@ -6,7 +6,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class EventPlannerWithList {
-    private static final String FILENAME = "NewQeury/events.txt";
+    private static final String FILENAME = "events.txt";
 
     public static void myEventPlannerWithList() {
         Scanner scanner = new Scanner(System.in);
@@ -72,7 +72,12 @@ public class EventPlannerWithList {
             File eventsFile = new File(FILENAME);
             if (!eventsFile.exists()) {
                 try {
-                    eventsFile.createNewFile();
+                    File file = new File("Events.txt");
+                    FileWriter writer = new FileWriter(file, true);
+                    //writer.write(eventName + "," + eventDate + "\n");
+                    //writer.close();
+                    //System.out.println("Events added successfully!");
+                    //eventsFile.createNewFile();
                 } catch (IOException e) {
                     System.err.println("Error creating events file: " + e.getMessage());
                     return;
